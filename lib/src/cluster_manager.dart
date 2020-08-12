@@ -19,7 +19,7 @@ class ClusterManager<T> {
   final Future<Marker> Function(Cluster<T>) markerBuilder;
 
   // Function to update Markers on Google Map
-  final void Function(Set<Marker>) updateMarkers;
+  final void Function(Set<T>) updateMarkers;
 
   // Zoom levels configuration
   final List<double> levels;
