@@ -70,7 +70,7 @@ class ClusterManager<T> {
   void updateClusters() async {
     List<Cluster<T>> mapMarkers = await getMarkers();
 
-    final Set<Marker> markers =
+    final Set<T> markers =
         Set.from(await Future.wait(mapMarkers.map((m) => markerBuilder(m))));
 
     updateMarkers(markers);
